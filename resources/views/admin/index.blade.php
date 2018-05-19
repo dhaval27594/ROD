@@ -7,7 +7,7 @@
         <section class="content-header">
             <h1>
                 Admin
-                <small>Blank example to the fixed layout</small>
+                <small>ROD</small>
             </h1>
             <ol class="breadcrumb">
                 <li class="Active"><i class="fa fa-dashboard"></i> Home</a></li>
