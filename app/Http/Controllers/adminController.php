@@ -188,7 +188,7 @@ class adminController extends Controller
     public function proposallist()
     {
         $proposal=Proposal::get();
-        return view('admin.company.proposallist',['proposal'=>$proposal]);
+        return view('admin.company.proposalList',['proposal'=>$proposal]);
     }
 	
 	//============ Recruiter =============
