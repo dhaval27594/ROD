@@ -121,7 +121,7 @@
                     </a>
                     <ul class="treeview-menu"@if(Request::is('admin/employee/employeelist') || Request::is('admin/employee/addemployee')) style="display: block;" @endif>
 						<li><a href="{{route('employeeList')}}"><i class="fa fa-list"></i> List of Employee</a></li>
-                        <li><a href="#"><i class="fa fa-list"></i> Schedule</a></li>
+
                     </ul>
                 </li>
 
