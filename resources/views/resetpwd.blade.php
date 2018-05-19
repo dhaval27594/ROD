@@ -23,7 +23,7 @@
                                 </div>
                                 <span class="material-input"></span></div>
                             <p class="fieldset">
-                                <button class="btn btn-common log-btn" type="submit" onclick="mail()">Reset password</button>
+                                <button class="btn btn-common log-btn" type="submit">Reset password</button>
                             </p>
                         </form>
                         <p class="cd-form-bottom-message"><a href="{{route('login')}}">Back to log-in</a></p>
