@@ -35,9 +35,5 @@
         </div>
     </div>
     <br><br>
-    <script>
-        function mail() {
-            alert("please check your mail.");
-        }
-    </script>
+
 @endsection
