@@ -9,7 +9,7 @@ use App\EmployeeProfileModel;
 use App\MyEmployee;
 use App\Proposal;
 use App\RecruiterProfile;
-use App\jobPostModel;
+use App\JobPostModel;
 use App\User;
 
 use Illuminate\Http\Request;
@@ -146,7 +146,7 @@ class adminController extends Controller
 
 	public function jobpostlist()
     {
-        $joblist=jobPostModel::get();
+        $joblist=JobPostModel::get();
         return view('admin.company.jobPostList',['joblist'=>$joblist]);
     }
 
