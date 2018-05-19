@@ -4,17 +4,6 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
 	<br>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="col-md-4">
-                </div>
-                <div class="col-md-6">
-                </div>
-                <div class="col-md-2">
-                    <a href="{{route('addJob')}}"><button type="button" class="btn btn-block btn-danger">Add New Job</button></a>
-                </div>
-            </div>
-        </div>
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
