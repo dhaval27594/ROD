@@ -146,7 +146,7 @@ class adminController extends Controller
 
 	public function jobpostlist()
     {
-        $joblist=jobPostModel::get();
+        $joblist=jobPostModel::get(); dd($joblist);
         return view('admin.company.jobPostList',['joblist'=>$joblist]);
     }
 
