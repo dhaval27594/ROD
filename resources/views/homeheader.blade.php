@@ -112,7 +112,7 @@
                     </li>
                     <li>
                         <a>Services</a>
-                        <ul class="dropdown">
+                        <ul>
                             <li>
                                 <a href="{{route('login')}}"><i class="fa fa-briefcase"></i> Company</a>
                             </li>
