@@ -108,26 +108,23 @@
                         <a href="{{route('about')}}">About Us</a>
                     </li>
                     <li>
+                        <a href="{{route('contactus')}}">Contact Us</a>
+                    </li>
+                    <li>
                         <a href="#">Services</a>
                         <ul class="dropdown">
                             <li>
-                                <a href="#">Add Job</a>
+                                <a href="{{route('login')}}"><i class="fa fa-briefcase"></i> Company</a>
                             </li>
                             <li>
-                                <a href="#">Manage Jobs</a>
+                                <a href="{{route('login')}}"><i class="fa fa-users"></i> Recruiter</a>
                             </li>
                             <li>
-                                <a href="#">Manage Applications</a>
-                            </li>
-                            <li>
-                                <a href="#">Browse Resumes</a>
+                                <a href="{{route('login')}}"><i class="ti-user"></i> Employee</a>
                             </li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="{{route('contactus')}}">Contact Us</a>
-                    </li>
-                    <li class="btn-m"><a href="#"><i class="ti-pencil-alt"></i> Post A Job</a></li>
+                    
                     <li class="btn-m"><a href="{{route('login')}}"><i class="ti-lock"></i>  Log In</a></li>
                     <li class="btn-m"><a href="{{route('signup')}}"><i class="ti-user"></i>  Sign Up</a></li>
                 </ul>
