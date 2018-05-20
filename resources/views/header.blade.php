@@ -126,7 +126,8 @@
                 </li>
                 @else
                      @if(Auth::user()->usertype=="1")
-                        <a><i class="fa fa-cogs"></i> Services</a>
+		     <li>
+		     	<a><i class="fa fa-cogs"></i> Services</a>
                         <ul>
                             <li>
                                 <a href="{{route('myProposal')}}"><i class="ti-list"></i>&nbsp; Proposal List</a>
@@ -138,8 +139,10 @@
                                 <a href="{{route('viewJobs')}}"><i class="fa fa-briefcase"></i>&nbsp; View My Posted Job</a>
                             </li>
                         </ul>
+		     </li>
                      @elseif(Auth::user()->usertype=="2")
-                        <a><i class="fa fa-cogs"></i> Services</a>
+		     <li>
+		     	<a><i class="fa fa-cogs"></i> Services</a>
                         <ul>
                             <li>
                                 <a href="{{route('myProposal')}}"><i class="ti-list"></i>&nbsp; My Proposal List</a>
@@ -154,6 +157,7 @@
                                 <a href="{{route('viewJobs')}}"><i class="fa fa-briefcase"></i>&nbsp; View Jobs</a>
                             </li>
                         </ul>
+		     </li>
                      @elseif(Auth::user()->usertype=="3")
                         
                      @endif
