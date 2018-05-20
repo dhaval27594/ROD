@@ -175,7 +175,7 @@
     </div>
 </section>
 <!-- Testimonial Section End -->
-<br><br>
+<hr>
 <!-- Counter Section Start -->
 <section id="counter">
     <div class="container">
@@ -231,5 +231,5 @@
     </div>
 </section>
 <!-- Counter Section End -->
-<br><br>
+<hr>
 @endsection
