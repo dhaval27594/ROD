@@ -70,7 +70,7 @@
     </div>
 </section>
 <!-- Who We are ? Section End -->
-
+<hr>
 <!-- Who can join us ? Section Start -->
 <section class="featured-jobs section">
     <div class="container">
