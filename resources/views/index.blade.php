@@ -64,7 +64,7 @@
         <h2 class="section-title">Who We are ?</h2>
         <div class="row">
             <div class="col-md-12">
-                <h6 class="text-left">Many industries like marketing, constructions, interior designers don't want to hire the employees for long term due to limited budget and short term work. They have to waste lot of time to hire resource without any contacts. They are losing their client due to not able to get reliable resource on time and experts in skills. Our online site is solution for that industries where they can easily got skilled and reliable resources from large number of recruiters who already have lot of skill contacts with their dictionary. This system beneficial for all industries, as well the skilled employees who are looking for side short term job due to their additional skills. This help recruiters maintain lot of contacts give much better reputation in market. </h6>
+                <p><h4 class="text-left">       Many industries like marketing, constructions, interior designers don't want to hire the employees for long term due to limited budget and short term work. They have to waste lot of time to hire resource without any contacts. They are losing their client due to not able to get reliable resource on time and experts in skills. Our online site is solution for that industries where they can easily got skilled and reliable resources from large number of recruiters who already have lot of skill contacts with their dictionary. This system beneficial for all industries, as well the skilled employees who are looking for side short term job due to their additional skills. This help recruiters maintain lot of contacts give much better reputation in market.</h4><p>
             </div>
         </div>
     </div>
