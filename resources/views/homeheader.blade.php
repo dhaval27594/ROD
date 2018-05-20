@@ -55,7 +55,7 @@
                                                 <a href="{{route('jobpost')}}"><i class="fa fa-paper-plane-o"></i> Post New Job</a>
                                             </li>
                                             <li>
-                                                <a href="{{route('viewJobs')}}"><i class="fa fa-briefcase"></i>View My Posted Job</a>
+                                                <a href="{{route('viewJobs')}}"><i class="fa fa-briefcase"></i> View My Posted Job</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -64,16 +64,16 @@
                                         <a>Services <i class="fa fa-angle-down"></i></a>
                                         <ul class="dropdown">
                                             <li>
-                                                <a href="{{route('myProposal')}}"><i class="ti-list"></i>My Proposal List</a>
+                                                <a href="{{route('myProposal')}}"><i class="ti-list"></i> My Proposal List</a>
                                             </li>
                                             <li>
                                                 <a href="{{route('myEmployee')}}"><i class="ti-list"></i> My Employees</a>
                                             </li>
                                             <li>
-                                                <a href="{{route('addmyEmployee')}}"><i class="fa fa-users"></i>View Employees</a>
+                                                <a href="{{route('addmyEmployee')}}"><i class="fa fa-users"></i> View Employees</a>
                                             </li>
                                             <li>
-                                                <a href="{{route('viewJobs')}}"><i class="fa fa-briefcase"></i>View Jobs</a>
+                                                <a href="{{route('viewJobs')}}"><i class="fa fa-briefcase"></i> View Jobs</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -131,13 +131,13 @@
                                 <a>Services</a>
                                 <ul>
                                     <li>
-                                        <a href="{{route('myProposal')}}"><i class="ti-list"></i> Proposal List</a>
+                                        <a href="{{route('myProposal')}}"><i class="ti-list"></i>&nbps; Proposal List</a>
                                     </li>
                                     <li>
-                                        <a href="{{route('jobpost')}}"><i class="fa fa-paper-plane-o"></i> Post New Job</a>
+                                        <a href="{{route('jobpost')}}"><i class="fa fa-paper-plane-o"></i>&nbps; Post New Job</a>
                                     </li>
                                     <li>
-                                        <a href="{{route('viewJobs')}}"><i class="fa fa-briefcase"></i>View My Posted Job</a>
+                                        <a href="{{route('viewJobs')}}"><i class="fa fa-briefcase"></i>&nbps; View My Posted Job</a>
                                     </li>
                                 </ul>
                             </li>
@@ -146,16 +146,16 @@
                                 <a>Services</a>
                                 <ul>
                                     <li>
-                                        <a href="{{route('myProposal')}}"><i class="ti-list"></i>My Proposal List</a>
+                                        <a href="{{route('myProposal')}}"><i class="ti-list"></i>&nbps; My Proposal List</a>
                                     </li>
                                     <li>
-                                        <a href="{{route('myEmployee')}}"><i class="ti-list"></i> My Employees</a>
+                                        <a href="{{route('myEmployee')}}"><i class="ti-list"></i>&nbps; My Employees</a>
                                     </li>
                                     <li>
-                                        <a href="{{route('addmyEmployee')}}"><i class="fa fa-users"></i>View Employees</a>
+                                        <a href="{{route('addmyEmployee')}}"><i class="fa fa-users"></i>&nbps; View Employees</a>
                                     </li>
                                     <li>
-                                        <a href="{{route('viewJobs')}}"><i class="fa fa-briefcase"></i>View Jobs</a>
+                                        <a href="{{route('viewJobs')}}"><i class="fa fa-briefcase"></i>&nbps; View Jobs</a>
                                     </li>
                                 </ul>
                             </li>
@@ -163,9 +163,19 @@
 
        	                @endif
                     @endif
-                    
-                    <li class="btn-m"><a href="{{route('login')}}"><i class="ti-lock"></i>  Log In</a></li>
-                    <li class="btn-m"><a href="{{route('signup')}}"><i class="ti-user"></i>  Sign Up</a></li>
+                   
+		    @if(!Auth::user())
+		    	<li class="btn-m"><a href="{{route('login')}}"><i class="ti-lock"></i>  Log In</a></li>
+                    	<li class="btn-m"><a href="{{route('signup')}}"><i class="ti-user"></i>  Sign Up</a></li>
+		    @else
+		    	<li class="btn-m"><a href="{{route('userLogout')}}"><i class="ti-unlock"></i>Log out</a></li>
+		    	@if(Auth::user()->usertype=="1")
+				<li class="btn-m"><a href="{{route('companyProfile')}}"><i class="ti-user"></i>Profile</a></li>
+			@elseif(Auth::user()->usertype=="2")
+				<li class="btn-m"><a href="{{route('recruiterProfile')}}"><i class="ti-user"></i>My Profile</a></li>
+			@elseif(Auth::user()->usertype=="3")
+				<li class="btn-m"><a href="{{route('employeeProfile')}}"><i class="ti-user"></i>My Profile</a></li>
+		    @endif
                 </ul>
                 <!-- Mobile Menu End -->
             </nav>
