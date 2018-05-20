@@ -175,7 +175,7 @@
     </div>
 </section>
 <!-- Testimonial Section End -->
-
+<br><br>
 <!-- Counter Section Start -->
 <section id="counter">
     <div class="container">
@@ -231,21 +231,5 @@
     </div>
 </section>
 <!-- Counter Section End -->
-
-<!-- Clients Section -->
-<section class="clients section">
-    <div class="container">
-        <h2 class="section-title">Our Top Companies</h2>
-        <div class="row">
-            @foreach($topcmp as $cmplist)
-            <div class="touch-slider" class="owl-carousel owl-theme">
-                <div class="item active text-center">
-                    <img class="img-member" src="{{ asset('assets/img/company').'/'.$cmplist->logo}}" width="400" height="250" alt="">
-                </div>
-            </div>
-                @endforeach
-        </div>
-    </div>
-</section>
-<!-- Client Section End -->
+<br><br>
 @endsection
