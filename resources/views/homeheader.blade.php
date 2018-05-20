@@ -121,14 +121,14 @@
                                     <a href="{{route('login')}}"><i class="fa fa-users"></i> Recruiter</a>
                                 </li>
                                 <li>
-                                    <a href="{{route('login')}}"><i class="ti-user"></i> Employee</a>
+                                    <a href="{{route('login')}}"><i class="fa fa-user"></i> Employee</a>
                                 </li>
                             </ul>
                         </li>
                     @else
 	                    @if(Auth::user()->usertype=="1")
                             <li>
-                                <a>Services</a>
+                                <a><i class="fa fa-cogs"></i> Services</a>
                                 <ul>
                                     <li>
                                         <a href="{{route('myProposal')}}"><i class="ti-list"></i>&nbsp; Proposal List</a>
@@ -143,7 +143,7 @@
                             </li>
 	                    @elseif(Auth::user()->usertype=="2")
                             <li>
-                                <a>Services</a>
+                                <a><i class="fa fa-cogs"></i> Services</a>
                                 <ul>
                                     <li>
                                         <a href="{{route('myProposal')}}"><i class="ti-list"></i>&nbsp; My Proposal List</a>
