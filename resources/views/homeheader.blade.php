@@ -175,6 +175,7 @@
 				<li class="btn-m"><a href="{{route('recruiterProfile')}}"><i class="ti-user"></i>My Profile</a></li>
 			@elseif(Auth::user()->usertype=="3")
 				<li class="btn-m"><a href="{{route('employeeProfile')}}"><i class="ti-user"></i>My Profile</a></li>
+		    	@endif
 		    @endif
                 </ul>
                 <!-- Mobile Menu End -->
