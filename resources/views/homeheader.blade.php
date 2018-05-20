@@ -105,14 +105,14 @@
                         <a class="active" href="{{route('index')}}"><i class="fa fa-home"></i> Home</a>
                     </li>
                     <li>
-                        <a href="{{route('about')}}"><i class="fa fa-address-card-o"></i> About Us</a>
+                        <a href="{{route('about')}}"><i class="fa fa-info-circle"></i> About Us</a>
                     </li>
                     <li>
                         <a href="{{route('contactus')}}"><i class="fa fa-phone"></i> Contact Us</a>
                     </li>
                     @if(!Auth::user())
                         <li>
-                            <a>Services</a>
+                            <a><i class="fa fa-cogs"></i> Services</a>
                             <ul>
                                 <li>
                                     <a href="{{route('login')}}"><i class="fa fa-briefcase"></i> Company</a>
