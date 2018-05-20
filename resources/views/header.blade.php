@@ -101,16 +101,17 @@
             <!-- Mobile Menu Start -->
             <ul class="wpb-mobile-menu">
                 <li>
-                    <a class="active" href="{{route('index')}}">Home</a>
+                    <a class="active" href="{{route('index')}}"><i class="fa fa-home"></i> Home</a>
                 </li>
                 <li>
-                    <a href="{{route('about')}}">About Us</a>
+                    <a href="{{route('about')}}"><i class="fa fa-info-circle"></i> About Us</a>
                 </li>
                 <li>
-                    <a href="{{route('contactus')}}">Contact Us</a>
+                    <a href="{{route('contactus')}}"><i class="fa fa-phone"></i> Contact Us</a>
                 </li>
+                @if(!Auth::user())
                 <li>
-                    <a>Services</a>
+                    <a><i class="fa fa-cogs"></i> Services</a>
                     <ul>
                         <li>
                             <a href="{{route('login')}}"><i class="fa fa-briefcase"></i> Company</a>
@@ -119,13 +120,58 @@
                             <a href="{{route('login')}}"><i class="fa fa-users"></i> Recruiter</a>
                         </li>
                         <li>
-                            <a href="{{route('login')}}"><i class="ti-user"></i> Employee</a>
+                            <a href="{{route('login')}}"><i class="fa fa-user"></i> Employee</a>
                         </li>
                     </ul>
                 </li>
+                @else
+                     @if(Auth::user()->usertype=="1")
+                        <a><i class="fa fa-cogs"></i> Services</a>
+                        <ul>
+                            <li>
+                                <a href="{{route('myProposal')}}"><i class="ti-list"></i>&nbsp; Proposal List</a>
+                            </li>
+                            <li>
+                                <a href="{{route('jobpost')}}"><i class="fa fa-paper-plane-o"></i>&nbsp; Post New Job</a>
+                            </li>
+                            <li>
+                                <a href="{{route('viewJobs')}}"><i class="fa fa-briefcase"></i>&nbsp; View My Posted Job</a>
+                            </li>
+                        </ul>
+                     @elseif(Auth::user()->usertype=="2")
+                        <a><i class="fa fa-cogs"></i> Services</a>
+                        <ul>
+                            <li>
+                                <a href="{{route('myProposal')}}"><i class="ti-list"></i>&nbsp; My Proposal List</a>
+                            </li>
+                            <li>
+                                <a href="{{route('myEmployee')}}"><i class="ti-list"></i>&nbsp; My Employees</a>
+                            </li>
+                            <li>
+                                <a href="{{route('addmyEmployee')}}"><i class="fa fa-users"></i>&nbsp; View Employees</a>
+                            </li>
+                            <li>
+                                <a href="{{route('viewJobs')}}"><i class="fa fa-briefcase"></i>&nbsp; View Jobs</a>
+                            </li>
+                        </ul>
+                     @elseif(Auth::user()->usertype=="3")
+                        
+                     @endif
+                @endif
                 
-                <li class="btn-m"><a href="{{route('login')}}"><i class="ti-lock"></i>  Log In</a></li>
-                <li class="btn-m"><a href="{{route('signup')}}"><i class="ti-user"></i>  Sign Up</a></li>
+                @if(!Auth::user())
+		    	    <li class="btn-m"><a href="{{route('login')}}"><i class="ti-lock"></i>  Log In</a></li>
+                    <li class="btn-m"><a href="{{route('signup')}}"><i class="ti-user"></i>  Sign Up</a></li>
+		        @else
+		    	    <li class="btn-m"><a href="{{route('userLogout')}}"><i class="ti-unlock"></i> Log out</a></li>
+                    @if(Auth::user()->usertype=="1")
+                        <li class="btn-m"><a href="{{route('companyProfile')}}"><i class="fa fa-industry"></i> Profile</a></li>
+                    @elseif(Auth::user()->usertype=="2")
+                        <li class="btn-m"><a href="{{route('recruiterProfile')}}"><i class="fa fa-user-circle"></i> My Profile</a></li>
+                    @elseif(Auth::user()->usertype=="3")
+                        <li class="btn-m"><a href="{{route('employeeProfile')}}"><i class="fa fa-user-circle"></i> My Profile</a></li>
+                    @endif
+                @endif
             </ul>
             <!-- Mobile Menu End -->
         </nav>
