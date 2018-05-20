@@ -108,7 +108,7 @@
                         <a href="{{route('about')}}"><i class="fa fa-address-card-o"></i> About Us</a>
                     </li>
                     <li>
-                        <a href="{{route('contactus')}}"><i class="fa fa-mobile"></i> Contact Us</a>
+                        <a href="{{route('contactus')}}"><i class="fa fa-phone"></i> Contact Us</a>
                     </li>
                     @if(!Auth::user())
                         <li>
@@ -170,11 +170,11 @@
 		    @else
 		    	<li class="btn-m"><a href="{{route('userLogout')}}"><i class="ti-unlock"></i> Log out</a></li>
 		    	@if(Auth::user()->usertype=="1")
-				<li class="btn-m"><a href="{{route('companyProfile')}}"><i class="ti-user"></i> Profile</a></li>
+				<li class="btn-m"><a href="{{route('companyProfile')}}"><i class="fa fa-industry"></i> Profile</a></li>
 			@elseif(Auth::user()->usertype=="2")
-				<li class="btn-m"><a href="{{route('recruiterProfile')}}"><i class="ti-user"></i> My Profile</a></li>
+				<li class="btn-m"><a href="{{route('recruiterProfile')}}"><i class="fa fa-user-circle"></i> My Profile</a></li>
 			@elseif(Auth::user()->usertype=="3")
-				<li class="btn-m"><a href="{{route('employeeProfile')}}"><i class="ti-user"></i> My Profile</a></li>
+				<li class="btn-m"><a href="{{route('employeeProfile')}}"><i class="fa fa-user-circle"></i> My Profile</a></li>
 		    	@endif
 		    @endif
                 </ul>
