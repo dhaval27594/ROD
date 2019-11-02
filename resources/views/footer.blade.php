@@ -59,7 +59,8 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="site-info text-center">
-                    <p>All Rights reserved &copy; 2017 - Designed & Developed by <a rel="nofollow" href="#">MTAJ Solution</a></p>
+                    <!--<p>All Rights reserved &copy; 2017 - Designed & Developed by <a rel="nofollow" href="#">MTAJ Solution</a></p>-->
+                    <p>All Rights reserved &copy; 2019 - Designed & Developed by <a rel="nofollow" href="#">Trycatch Infotech</a></p>
                 </div>
             </div>
         </div>
